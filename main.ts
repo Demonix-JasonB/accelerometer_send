@@ -1,0 +1,10 @@
+radio.setGroup(1)
+basic.forever(function on_forever() {
+    let a_X = input.acceleration(Dimension.X)
+    let a_Y = input.acceleration(Dimension.Y)
+    let a_Z = input.acceleration(Dimension.Z)
+    radio.sendValue("Accel.x", a_X)
+    radio.sendValue("Accel.y", a_Y)
+    radio.sendValue("Accel.z", a_Z)
+    led.toggle(0, 0)
+})
